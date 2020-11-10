@@ -20,6 +20,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Marisa.sln.DotSettings = Marisa.sln.DotSettings
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Game", "Game", "{E49A5171-1705-4B6B-9F66-C116F06F3ADD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Online", "Online", "{5B78B7FD-82B9-443B-89B8-398CD4D3782B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marisa.Reimu", "Marisa.Reimu\Marisa.Reimu.csproj", "{2CE85D07-3406-4C4D-B635-AC2ECFF7E3AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -88,9 +94,29 @@ Global
 		{31D3872C-3A4F-437E-9655-3EF58DD62F46}.Release|iPhone.Build.0 = Release|Any CPU
 		{31D3872C-3A4F-437E-9655-3EF58DD62F46}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{31D3872C-3A4F-437E-9655-3EF58DD62F46}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{2CE85D07-3406-4C4D-B635-AC2ECFF7E3AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CE85D07-3406-4C4D-B635-AC2ECFF7E3AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CE85D07-3406-4C4D-B635-AC2ECFF7E3AD}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{2CE85D07-3406-4C4D-B635-AC2ECFF7E3AD}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{2CE85D07-3406-4C4D-B635-AC2ECFF7E3AD}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{2CE85D07-3406-4C4D-B635-AC2ECFF7E3AD}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{2CE85D07-3406-4C4D-B635-AC2ECFF7E3AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CE85D07-3406-4C4D-B635-AC2ECFF7E3AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CE85D07-3406-4C4D-B635-AC2ECFF7E3AD}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{2CE85D07-3406-4C4D-B635-AC2ECFF7E3AD}.Release|iPhone.Build.0 = Release|Any CPU
+		{2CE85D07-3406-4C4D-B635-AC2ECFF7E3AD}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{2CE85D07-3406-4C4D-B635-AC2ECFF7E3AD}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AEB3FC89-DC3E-4BC9-9EC7-03B72FC5D849} = {E49A5171-1705-4B6B-9F66-C116F06F3ADD}
+		{7AA1DB5D-78DB-4693-AE50-D6078F5A0CAB} = {E49A5171-1705-4B6B-9F66-C116F06F3ADD}
+		{1ADACD09-7BE3-46A1-AEAB-C41E78E8700F} = {E49A5171-1705-4B6B-9F66-C116F06F3ADD}
+		{0A9CA1A5-5147-4AA8-9B9D-87178DE5A78D} = {E49A5171-1705-4B6B-9F66-C116F06F3ADD}
+		{31D3872C-3A4F-437E-9655-3EF58DD62F46} = {E49A5171-1705-4B6B-9F66-C116F06F3ADD}
+		{2CE85D07-3406-4C4D-B635-AC2ECFF7E3AD} = {5B78B7FD-82B9-443B-89B8-398CD4D3782B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {63CD18E3-A50D-41FD-AD10-009B93DCCD5D}
