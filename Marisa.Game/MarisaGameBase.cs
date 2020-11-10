@@ -4,6 +4,7 @@ using osu.Framework.Graphics.Containers;
 using osu.Framework.IO.Stores;
 using osuTK;
 using Marisa.Resources;
+using System.IO;
 
 namespace Marisa.Game
 {
@@ -17,6 +18,8 @@ namespace Marisa.Game
 
         protected MarisaGameBase()
         {
+            if (!Directory.Exists("charts"))
+                Directory.CreateDirectory("charts");
             // Ensure game and tests scale with window size and screen DPI.
             base.Content.Add(Content = new DrawSizePreservingFillContainer
             {

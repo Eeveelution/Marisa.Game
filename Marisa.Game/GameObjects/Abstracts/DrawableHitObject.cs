@@ -13,8 +13,8 @@ namespace Marisa.Game.GameObjects.Abstracts
 {
     public abstract class HitObject : CompositeDrawable
     {
-        public int HitTime;
-        public HitColor HitColor;
+        public long HitTime;
+        public HitColor HitColor = HitColor.Red;
 
         private Container box;
 
@@ -33,12 +33,15 @@ namespace Marisa.Game.GameObjects.Abstracts
                         RelativeSizeAxes = Axes.Both,
                         Anchor = Anchor.Centre,
                         Origin = Anchor.Centre,
+                        Colour = Colour4.Transparent
                     },
                     new Sprite
                     {
                         Anchor = Anchor.Centre,
                         Origin = Anchor.Centre,
-                        Texture = textures.Get("logo")
+                        Texture = textures.Get(HitColor == HitColor.Blue ? "drum-kat" : "drum-don"),
+                        
+                        Size = new osuTK.Vector2(96f,96f)
                     },
                 }
 

@@ -22,7 +22,7 @@ namespace Marisa.Game
         {
             base.LoadComplete();
 
-            screenStack.Push(new MainScreen());
+            screenStack.Push(new Screens.MainScreen());
         }
 
         

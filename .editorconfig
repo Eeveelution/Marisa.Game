@@ -120,10 +120,10 @@ csharp_preserve_single_line_statements = true
 #Roslyn language styles
 
 #Style - this. qualification
-dotnet_style_qualification_for_field = false:warning
-dotnet_style_qualification_for_property = false:warning
-dotnet_style_qualification_for_method = false:warning
-dotnet_style_qualification_for_event = false:warning
+dotnet_style_qualification_for_field = false:none
+dotnet_style_qualification_for_property = false:none
+dotnet_style_qualification_for_method = false:none
+dotnet_style_qualification_for_event = false:none
 
 #Style - type names
 dotnet_style_predefined_type_for_locals_parameters_members = true:warning
@@ -200,3 +200,6 @@ dotnet_diagnostic.IDE0052.severity = silent
 dotnet_diagnostic.IDE0067.severity = none
 dotnet_diagnostic.IDE0068.severity = none
 dotnet_diagnostic.IDE0069.severity = none
+
+# IDE0001: Simplify Names
+dotnet_diagnostic.IDE0001.severity = none

@@ -10,6 +10,8 @@ Marisa.Desktop/bin
 Marisa.Desktop/obj
 Marisa.Reimu/bin
 Marisa.Reimu/obj
+Marisa.Converter/bin
+Marisa.Converter/obj
 .vs/
 .idea/
 .vscode
