@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "path": "Marisa.sln",
+    "projects": [
+      "Marisa.Game\\Marisa.Game.csproj",
+      "Marisa.Resources\\Marisa.Resources.csproj",
+      "Marisa.iOS\\Marisa.iOS.csproj"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+﻿{
+  "solution": {
+    "path": "Marisa.sln",
+    "projects": [
+      "Marisa.Desktop\\Marisa.Desktop.csproj",
+      "Marisa.Game\\Marisa.Game.csproj",
+      "Marisa.Game.Tests\\Marisa.Game.Tests.csproj",
+      "Marisa.Resources\\Marisa.Resources.csproj"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+Marisa.Resources/bin
+Marisa.Resources/obj
+Marisa.iOS/bin
+Marisa.iOS/obj
+Marisa.Game.Tests/bin
+Marisa.Game.Tests/obj
+Marisa.Game/bin
+Marisa.Game/obj
+Marisa.Desktop/bin
+Marisa.Desktop/obj
+.vs/
+.idea/
+.vscode
+*.htm
