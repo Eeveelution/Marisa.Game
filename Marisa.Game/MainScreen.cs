@@ -27,9 +27,9 @@ namespace Marisa.Game
                     Origin = Anchor.TopCentre,
                     Font = FontUsage.Default.With(size: 40)
                 },
-                new SpinningBox
+                new GameObjects.DrumHit
                 {
-                    Anchor = Anchor.Centre,
+                    Anchor = Anchor.Centre
                 }
             };
         }

@@ -10,10 +10,7 @@ namespace Marisa.Game.Tests.Visual
 
         public TestSceneSpinningBox()
         {
-            Add(new SpinningBox
-            {
-                Anchor = Anchor.Centre,
-            });
+            
         }
     }
 }
