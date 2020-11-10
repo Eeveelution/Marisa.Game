@@ -9,6 +9,7 @@ using osu.Framework.Audio;
 using osu.Framework.Audio.Sample;
 using osu.Framework.Audio.Track;
 using osu.Framework.Graphics;
+using osu.Framework.Graphics.Audio;
 using osu.Framework.Graphics.Shapes;
 using osu.Framework.Graphics.Sprites;
 using osu.Framework.Logging;
@@ -21,7 +22,7 @@ namespace Marisa.Game.Screens
     public class MainScreen : Screen
     {
 
-        private SampleChannelBass bassSample;
+        private DrawableSample sample;
 
         [BackgroundDependencyLoader]
         private void load(ISampleStore samples)
@@ -34,7 +35,7 @@ namespace Marisa.Game.Screens
             {
                 new Box
                 {
-                    Colour = Color4.Violet,
+                    Colour = Color4.DimGray,
                     RelativeSizeAxes = Axes.Both,
                 },
                 new SpriteText
@@ -47,6 +48,7 @@ namespace Marisa.Game.Screens
                 },
                 
             };
+
 
             Bass.Init(0);
 
