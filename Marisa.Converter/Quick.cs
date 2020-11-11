@@ -14,11 +14,25 @@ namespace Marisa.Converter
             Beatmap map = new Beatmap();
             map.Hits = new List<Hit>();
 
+            map.Version = 1;
+
+            map.Settings = new Settings();
+            map.Settings.HitSize = 2;
+            map.Settings.NoteVelocity = 1;
+
             int Index = 0;
             string[] file = File.ReadAllLines(filename);
 
             for(int i = 0; i != file.Length; i++)
             {
+                if (file[i].Contains("Title:")) map.Title = file[i].Replace("Title:", "");
+                if (file[i].Contains("TitleUnicode:")) map.TitleUnicode = file[i].Replace("TitleUnicode:", "");
+                if (file[i].Contains("Artist:")) map.Artist = file[i].Replace("Artist:", "");
+                if (file[i].Contains("ArtistUnicode:")) map.ArtistUnicode = file[i].Replace("ArtistUnicode:", "");
+                if (file[i].Contains("Creator:")) map.Creator = file[i].Replace("Creator:", "");
+                if (file[i].Contains("Version:")) map.Difficulty = file[i].Replace("Version:", "");
+                if (file[i].Contains("Source:")) map.Source = file[i].Replace("Source:", "");
+                if (file[i].Contains("Tags:")) map.Tags = file[i].Replace("Tags:", "");
                 if (file[i].Contains("HitObjects"))
                 {
                     Index = i;

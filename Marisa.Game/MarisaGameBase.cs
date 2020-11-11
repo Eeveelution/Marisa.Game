@@ -5,6 +5,7 @@ using osu.Framework.IO.Stores;
 using osuTK;
 using Marisa.Resources;
 using System.IO;
+using osu.Framework.Configuration;
 
 namespace Marisa.Game
 {
@@ -29,8 +30,9 @@ namespace Marisa.Game
         }
 
         [BackgroundDependencyLoader]
-        private void load()
+        private void load(FrameworkConfigManager config)
         {
+            config.GetBindable<FrameSync>(FrameworkSetting.FrameSync).Value = FrameSync.Limit8x;
             Resources.AddStore(new DllResourceStore(typeof(MarisaResources).Assembly));
         }
     }

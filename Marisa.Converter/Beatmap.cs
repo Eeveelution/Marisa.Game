@@ -15,8 +15,14 @@
         [JsonProperty("artist")]
         public string Artist { get; set; }
 
+        [JsonProperty("artist_unicode")]
+        public string ArtistUnicode { get; set; }
+
         [JsonProperty("title")]
         public string Title { get; set; }
+
+        [JsonProperty("title_unicode")]
+        public string TitleUnicode { get; set; }
 
         [JsonProperty("difficulty")]
         public string Difficulty { get; set; }
@@ -26,6 +32,9 @@
 
         [JsonProperty("tags")]
         public string Tags { get; set; }
+
+        [JsonProperty("creator")]
+        public string Creator { get; set; }
 
         [JsonProperty("settings")]
         public Settings Settings { get; set; }
@@ -57,7 +66,6 @@
         [JsonProperty("hit_size")]
         public long HitSize { get; set; }
     }
-
     public partial class Beatmap
     {
         public static Beatmap FromJson(string json) => JsonConvert.DeserializeObject<Beatmap>(json, Marisa.Game.GameObjects.Reader.Settings);

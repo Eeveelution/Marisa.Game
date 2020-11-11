@@ -32,6 +32,11 @@ namespace Marisa.Game.GameObjects
 
         protected override void Update()
         {
+            if(Math.Floor((this.HitTime - this.Clock.CurrentTime / 100)) == 0)
+            {
+                Logger.Log("Hit", LoggingTarget.Information, LogLevel.Debug, true);
+            }
+
             this.UpdateObjectPosition();
             base.Update();
         }
@@ -45,7 +50,7 @@ namespace Marisa.Game.GameObjects
 
         private void UpdateObjectPosition()
         {
-            this.X = (float)(-HitArea + (this.HitTime - this.Time.Current) * Speed);
+            this.X = (float)(-HitArea + (this.HitTime - Time.Current) * Speed);
 
         }
     }

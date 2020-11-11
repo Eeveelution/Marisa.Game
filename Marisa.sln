@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marisa.Desktop", "Marisa.Desktop\Marisa.Desktop.csproj", "{AEB3FC89-DC3E-4BC9-9EC7-03B72FC5D849}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marisa.iOS", "Marisa.iOS\Marisa.iOS.csproj", "{7AA1DB5D-78DB-4693-AE50-D6078F5A0CAB}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marisa.Game", "Marisa.Game\Marisa.Game.csproj", "{1ADACD09-7BE3-46A1-AEAB-C41E78E8700F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marisa.Game.Tests", "Marisa.Game.Tests\Marisa.Game.Tests.csproj", "{0A9CA1A5-5147-4AA8-9B9D-87178DE5A78D}"
@@ -28,7 +26,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marisa.Reimu", "Marisa.Reim
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{FF018E64-0BAD-4858-B267-87079A0E89EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marisa.Converter", "Marisa.Converter\Marisa.Converter.csproj", "{686CFB63-785B-4B58-8961-A731F1894602}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marisa.Converter", "Marisa.Converter\Marisa.Converter.csproj", "{686CFB63-785B-4B58-8961-A731F1894602}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,16 +50,6 @@ Global
 		{AEB3FC89-DC3E-4BC9-9EC7-03B72FC5D849}.Release|iPhone.Build.0 = Release|Any CPU
 		{AEB3FC89-DC3E-4BC9-9EC7-03B72FC5D849}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{AEB3FC89-DC3E-4BC9-9EC7-03B72FC5D849}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{7AA1DB5D-78DB-4693-AE50-D6078F5A0CAB}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
-		{7AA1DB5D-78DB-4693-AE50-D6078F5A0CAB}.Debug|iPhone.ActiveCfg = Debug|iPhone
-		{7AA1DB5D-78DB-4693-AE50-D6078F5A0CAB}.Debug|iPhone.Build.0 = Debug|iPhone
-		{7AA1DB5D-78DB-4693-AE50-D6078F5A0CAB}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
-		{7AA1DB5D-78DB-4693-AE50-D6078F5A0CAB}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
-		{7AA1DB5D-78DB-4693-AE50-D6078F5A0CAB}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
-		{7AA1DB5D-78DB-4693-AE50-D6078F5A0CAB}.Release|iPhone.ActiveCfg = Release|iPhone
-		{7AA1DB5D-78DB-4693-AE50-D6078F5A0CAB}.Release|iPhone.Build.0 = Release|iPhone
-		{7AA1DB5D-78DB-4693-AE50-D6078F5A0CAB}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
-		{7AA1DB5D-78DB-4693-AE50-D6078F5A0CAB}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{1ADACD09-7BE3-46A1-AEAB-C41E78E8700F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1ADACD09-7BE3-46A1-AEAB-C41E78E8700F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ADACD09-7BE3-46A1-AEAB-C41E78E8700F}.Debug|iPhone.ActiveCfg = Debug|Any CPU
@@ -128,7 +116,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{AEB3FC89-DC3E-4BC9-9EC7-03B72FC5D849} = {E49A5171-1705-4B6B-9F66-C116F06F3ADD}
-		{7AA1DB5D-78DB-4693-AE50-D6078F5A0CAB} = {E49A5171-1705-4B6B-9F66-C116F06F3ADD}
 		{1ADACD09-7BE3-46A1-AEAB-C41E78E8700F} = {E49A5171-1705-4B6B-9F66-C116F06F3ADD}
 		{0A9CA1A5-5147-4AA8-9B9D-87178DE5A78D} = {E49A5171-1705-4B6B-9F66-C116F06F3ADD}
 		{31D3872C-3A4F-437E-9655-3EF58DD62F46} = {E49A5171-1705-4B6B-9F66-C116F06F3ADD}
