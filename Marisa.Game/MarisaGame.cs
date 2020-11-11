@@ -92,6 +92,9 @@ namespace Marisa.Game
                     case Key.B:
                         map.LogBeatmap();
                         break;
+                    case Key.C:
+
+                        break;
                 }
             }
 
