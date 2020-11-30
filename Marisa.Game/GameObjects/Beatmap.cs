@@ -7,7 +7,9 @@
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
     using osu.Framework.Logging;
-
+    /// <summary>
+    /// This is the Beatmap Class which loads a JSON Encoded Beatmap for Playback
+    /// </summary>
     public partial class Beatmap
     {
         [JsonProperty("version")]
@@ -42,7 +44,9 @@
 
         [JsonProperty("hits")]
         public List<Hit> Hits { get; set; }
-
+        /// <summary>
+        /// Debug Only
+        /// </summary>
         public void LogBeatmap()
         {
             string Format = "";

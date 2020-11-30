@@ -42,8 +42,9 @@ namespace Marisa.Game
             Child = screenStack = new ScreenStack { RelativeSizeAxes = Axes.Both };
 
             #region MainScreenLoad
-
+            //Logs current directory the client is being run in
             Logger.Log("Running in: " + Environment.CurrentDirectory, LoggingTarget.Information, LogLevel.Debug, true);
+
             InternalChildren = new Drawable[]
             {
                 new Box
@@ -64,26 +65,29 @@ namespace Marisa.Game
 
 
             Bass.Init(0);
-
+            //Initializes Beatmap
             foreach (Hit h in map.Hits)
             {
                 AddInternal(new DrumHit(h.Time, (HitColor)h.Color));
             }
 
             #endregion
+            //Adds Audio
             Audio.AddItem(playback.GetAudioComponent());
         }
 
         protected override void LoadComplete()
         {
             base.LoadComplete();
+            //Starts Audio
             playback.Start();
-
+            //Currently stuff's broken so this is here
             map.LogBeatmap();
         }
 
         protected override bool OnKeyDown(KeyDownEvent e)
         {
+            //Currently serves no purpose other than to Debug Stuff
             if(!e.AltPressed && !e.ControlPressed)
             {
                 switch (e.Key)
