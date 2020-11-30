@@ -22,6 +22,7 @@ using osu.Framework.Graphics.Sprites;
 using ManagedBass;
 using Marisa.Game.GameObjects;
 using Marisa.Game.GameObjects.Enums;
+using Marisa.Game.Audio;
 
 namespace Marisa.Game
 {
@@ -29,10 +30,9 @@ namespace Marisa.Game
     {
         private ScreenStack screenStack;
 
-        private FileAudioStore AudioStore = new FileAudioStore();
-        //private FileAudioManager AudioManager = new FileAudioManager(Host.AudioThread, AudioStore, AudioStore);
-
         private Beatmap map = Beatmap.FromJson(File.ReadAllText("charts/messed up gravity/diff.json"));
+
+        private AudioPlayback playback = new AudioPlayback("charts/messed up gravity/audio.mp3");
 
         [BackgroundDependencyLoader]
         private void load()
@@ -42,8 +42,9 @@ namespace Marisa.Game
             Child = screenStack = new ScreenStack { RelativeSizeAxes = Axes.Both };
 
             #region MainScreenLoad
-
+            //Logs current directory the client is being run in
             Logger.Log("Running in: " + Environment.CurrentDirectory, LoggingTarget.Information, LogLevel.Debug, true);
+
             InternalChildren = new Drawable[]
             {
                 new Box
@@ -64,27 +65,29 @@ namespace Marisa.Game
 
 
             Bass.Init(0);
-
+            //Initializes Beatmap
             foreach (Hit h in map.Hits)
             {
                 AddInternal(new DrumHit(h.Time, (HitColor)h.Color));
             }
-            
-            StartAudio("charts/messed up gravity/audio.mp3");
-            #endregion
 
+            #endregion
+            //Adds Audio
+            Audio.AddItem(playback.GetAudioComponent());
         }
 
         protected override void LoadComplete()
         {
             base.LoadComplete();
-            //StartAudio();
-
+            //Starts Audio
+            playback.Start();
+            //Currently stuff's broken so this is here
             map.LogBeatmap();
         }
 
         protected override bool OnKeyDown(KeyDownEvent e)
         {
+            //Currently serves no purpose other than to Debug Stuff
             if(!e.AltPressed && !e.ControlPressed)
             {
                 switch (e.Key)
@@ -93,7 +96,6 @@ namespace Marisa.Game
                         map.LogBeatmap();
                         break;
                     case Key.C:
-
                         break;
                 }
             }
@@ -101,12 +103,5 @@ namespace Marisa.Game
             return base.OnKeyDown(e);
         }
 
-        public void StartAudio(string Filename)
-        {
-            Logger.Log($"Started Audio File \"{Filename}\"", LoggingTarget.Runtime, LogLevel.Verbose, true);
-            TrackBass test = new TrackBass(AudioStore.GetStream(Filename));
-            Audio.AddItem(test);
-            test.Start();
-        }
     }
 }

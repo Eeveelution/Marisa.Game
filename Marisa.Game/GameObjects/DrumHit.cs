@@ -18,6 +18,11 @@ namespace Marisa.Game.GameObjects
         private int HitArea = 128;
         private double Speed = 1;
 
+        /// <summary>
+        /// Taiko normal Hit Circle
+        /// </summary>
+        /// <param name="hitTime">Millisecond Time at which Object should be clicked</param>
+        /// <param name="hitColor">Color of said Object</param>
         public DrumHit(long hitTime, HitColor hitColor)
         {
             this.HitTime = hitTime;
@@ -41,13 +46,14 @@ namespace Marisa.Game.GameObjects
             base.Update();
         }
 
-        
 
         protected override void LoadComplete()
         {
             base.LoadComplete();
         }
-
+        /// <summary>
+        /// Updates HitObject Position, this is what's scrolling the Object on Every Update
+        /// </summary>
         private void UpdateObjectPosition()
         {
             this.X = (float)(-HitArea + (this.HitTime - Time.Current) * Speed);

@@ -18,7 +18,11 @@ namespace Marisa.Game.GameObjects.Abstracts
 
         private Container box;
 
-
+        /// <summary>
+        /// Gets Object that can be Added to a DrawableScene
+        /// </summary>
+        /// <param name="textures">Texture Store for grabbing Textures from</param>
+        /// <returns>Container that can be then added to DrawableScene</returns>
         public Container GetContainer(TextureStore textures)
         {
             return new Container
