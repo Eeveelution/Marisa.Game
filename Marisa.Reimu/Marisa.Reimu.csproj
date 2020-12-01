@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="ppy.osu.Framework" Version="2020.1201.0" />
+  </ItemGroup>
+
 </Project>

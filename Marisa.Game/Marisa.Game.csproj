@@ -6,7 +6,7 @@
     <ProjectReference Include="..\Marisa.Resources\Marisa.Resources.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="ppy.osu.Framework" Version="2020.1029.1" />
+    <PackageReference Include="ppy.osu.Framework" Version="2020.1201.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Loaders\" />

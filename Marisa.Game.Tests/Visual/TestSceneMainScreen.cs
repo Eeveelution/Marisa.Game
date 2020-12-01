@@ -11,7 +11,7 @@ namespace Marisa.Game.Tests.Visual
 
         public TestSceneMainScreen()
         {
-            Add(new ScreenStack(new MainScreen()) { RelativeSizeAxes = Axes.Both });
+            //Add(new ScreenStack(new GameplayScreen()) { RelativeSizeAxes = Axes.Both });
         }
     }
 }
