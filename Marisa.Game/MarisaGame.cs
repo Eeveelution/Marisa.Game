@@ -32,10 +32,6 @@ namespace Marisa.Game
     {
         private ScreenStack screenStack;
 
-        private Beatmap map = Beatmap.FromJson(File.ReadAllText("charts/messed up gravity/diff.json"));
-
-        private AudioPlayback playback = new AudioPlayback("charts/messed up gravity/audio.mp3");
-
         public void AddAudioItem(AdjustableAudioComponent audio) { this.Audio.AddItem(audio); }
 
         [BackgroundDependencyLoader]
@@ -49,28 +45,11 @@ namespace Marisa.Game
             //Logs current directory the client is being run in
             Logger.Log("Running in: " + Environment.CurrentDirectory, LoggingTarget.Information, LogLevel.Debug, true);
 
-            screenStack.Push(new GameplayScreen(this));
+            //screenStack.Push(new GameplayScreen(this));
+            screenStack.Push(new FrameworkTesting(this));
 
             Bass.Init(0);
             #endregion
-        }
-
-        protected override bool OnKeyDown(KeyDownEvent e)
-        {
-            //Currently serves no purpose other than to Debug Stuff
-            if(!e.AltPressed && !e.ControlPressed)
-            {
-                switch (e.Key)
-                {
-                    case Key.B:
-                        map.LogBeatmap();
-                        break;
-                    case Key.C:
-                        break;
-                }
-            }
-
-            return base.OnKeyDown(e);
         }
 
     }
